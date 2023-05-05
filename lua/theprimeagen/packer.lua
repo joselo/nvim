@@ -53,4 +53,12 @@ return require('packer').startup(function(use)
         "MunifTanjim/nui.nvim",
       }
   }
+
+  -- Aerial
+
+  use {
+    'stevearc/aerial.nvim',
+    config = function() require('aerial').setup() end
+  }
+
 end)

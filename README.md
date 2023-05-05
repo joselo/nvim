@@ -1,3 +1,3 @@
 # Dependencies
 
-pacman -S ripgrep
+pacman -S ripgrep nerd-fonts
