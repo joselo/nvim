@@ -25,13 +25,16 @@ return require('packer').startup(function(use)
 
   use('nvim-treesitter/nvim-treesitter', {run = ':TSUpdate'})
 
-  --  Nvim Test
+  -- Neotest
 
   use {
-    "klen/nvim-test",
-    config = function()
-      require('nvim-test').setup()
-    end
+    "nvim-neotest/neotest",
+    requires = {
+      "nvim-lua/plenary.nvim",
+      "nvim-treesitter/nvim-treesitter",
+      "antoinemadec/FixCursorHold.nvim",
+      "jfpedroza/neotest-elixir"
+    }
   }
 
   -- Comment
