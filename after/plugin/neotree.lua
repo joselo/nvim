@@ -1,4 +1,4 @@
-vim.keymap.set("n", "<C-x>", vim.cmd.Neotree)
+vim.keymap.set("n", "<C-x>", vim.cmd.NeoTreeFocusToggle)
 
 require('neo-tree').setup {
   filesystem = {

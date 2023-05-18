@@ -72,4 +72,7 @@ return require('packer').startup(function(use)
       require('gitsigns').setup()
     end
   }
+
+  -- Packer
+  use "sindrets/diffview.nvim" 
 end)
