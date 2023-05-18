@@ -73,6 +73,13 @@ return require('packer').startup(function(use)
     end
   }
 
-  -- Packer
+  -- Diffview
   use "sindrets/diffview.nvim" 
+
+  -- Lualine
+
+  use {
+    'nvim-lualine/lualine.nvim',
+    requires = { 'nvim-tree/nvim-web-devicons', opt = true }
+  }
 end)
