@@ -7,14 +7,6 @@ return require('packer').startup(function(use)
   -- Packer can manage itself
   use 'wbthomason/packer.nvim'
 
-  -- Telescope
-
-  use {
-    'nvim-telescope/telescope.nvim', tag = '0.1.1',
-    -- or                            , branch = '0.1.x',
-    requires = { {'nvim-lua/plenary.nvim'} }
-  }
-
   -- Colors
 
   use({ 'rose-pine/neovim', as = 'rose-pine' })
@@ -67,4 +59,11 @@ return require('packer').startup(function(use)
   -- Icons (Used for some packs"
 
   use "nvim-tree/nvim-web-devicons"
+
+  -- Fzf
+  use { 'ibhagwan/fzf-lua',
+    -- optional for icon support
+    requires = { 'nvim-tree/nvim-web-devicons' }
+  }
+  use = { 'junegunn/fzf', run = './install --bin', }
 end)

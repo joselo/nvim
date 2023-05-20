@@ -1,6 +1,6 @@
 local keymap = vim.keymap.set
 
-keymap("n", "<C-t>", vim.cmd.term)
+keymap("n", "<C-\\>", vim.cmd.term)
 
 local n_opts = {silent = true, noremap = true}
 local t_opts = {silent = true}
