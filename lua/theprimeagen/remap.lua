@@ -1,6 +1,7 @@
 local keymap = vim.keymap.set
 
-vim.g.mapleader = ","
+vim.keymap.set("n", " ", "<Nop>", { silent = true, remap = false })
+vim.g.mapleader = " "
 
 -- Move block of code
 

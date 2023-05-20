@@ -60,10 +60,15 @@ return require('packer').startup(function(use)
 
   use "nvim-tree/nvim-web-devicons"
 
+  --  Dressing
+
+  use {"chrisgrieser/nvim-genghis", requires = "stevearc/dressing.nvim"}
+
   -- Fzf
   use { 'ibhagwan/fzf-lua',
     -- optional for icon support
     requires = { 'nvim-tree/nvim-web-devicons' }
   }
   use = { 'junegunn/fzf', run = './install --bin', }
+
 end)

@@ -1,3 +1,3 @@
 # Dependencies
 
-pacman -S ripgrep nerd-fonts fzf the_silver_searcher
+pacman -S nerd-fonts fzf the_silver_searcher viu fd 
