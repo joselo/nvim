@@ -19,8 +19,6 @@ return require('packer').startup(function(use)
 
   use({ 'rose-pine/neovim', as = 'rose-pine' })
 
-  vim.cmd('colorscheme rose-pine')
-
   --  Treesitter
 
   use('nvim-treesitter/nvim-treesitter', {run = ':TSUpdate'})
@@ -46,17 +44,6 @@ return require('packer').startup(function(use)
       end
   }
 
-  -- Neo tree
-  use {
-    "nvim-neo-tree/neo-tree.nvim",
-      branch = "v2.x",
-      requires = {
-        "nvim-lua/plenary.nvim",
-        "nvim-tree/nvim-web-devicons", -- not strictly required, but recommended
-        "MunifTanjim/nui.nvim",
-      }
-  }
-
   -- Aerial
 
   use {
@@ -76,4 +63,8 @@ return require('packer').startup(function(use)
   -- Diffview
   use "sindrets/diffview.nvim" 
 
+
+  -- Icons (Used for some packs"
+
+  use "nvim-tree/nvim-web-devicons"
 end)
