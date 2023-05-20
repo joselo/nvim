@@ -32,3 +32,6 @@ vim.opt.colorcolumn = "80"
 
 -- display lines as one long line
 vim.opt.wrap = true
+
+-- display only file name in tabs
+vim.opt.guitablabel = "%t"
