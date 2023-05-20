@@ -12,7 +12,8 @@ vim.keymap.set(
   "<leader>t",
   function()
     neotest.run.run()
-  end
+  end,
+  {desc = 'Run the nearest test'}
 )
 
 vim.keymap.set(
@@ -20,5 +21,6 @@ vim.keymap.set(
   "<leader>tf",
   function()
     neotest.run.run(vim.fn.expand("%"))
-  end
+  end,
+  {desc = 'Run the current file test'}
 )
