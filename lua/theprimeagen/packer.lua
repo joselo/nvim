@@ -61,8 +61,12 @@ return require('packer').startup(function(use)
   use "nvim-tree/nvim-web-devicons"
 
   --  Dressing
-
-  use {"chrisgrieser/nvim-genghis", requires = "stevearc/dressing.nvim"}
+  use { "chrisgrieser/nvim-genghis", requires = {
+      "stevearc/dressing.nvim",
+      "hrsh7th/nvim-cmp",
+      "hrsh7th/cmp-omni"
+    }
+  }
 
   -- Fzf
   use { 'ibhagwan/fzf-lua',
