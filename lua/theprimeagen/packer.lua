@@ -83,6 +83,10 @@ return require('packer').startup(function(use)
     end
   }
 
+  -- Legendary
+
+  use 'mrjones2014/legendary.nvim'
+
   -- Fzf
   use { 'ibhagwan/fzf-lua',
     -- optional for icon support
