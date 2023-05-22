@@ -1,4 +1,5 @@
--- This file can be loaded by calling `lua require('plugins')` from your init.vim
+-- This file can be loaded by calling `lua require('plugins')`
+-- from your init.vim
 
 -- Only required if you have packer configured as `opt`
 vim.cmd [[packadd packer.nvim]]
@@ -9,8 +10,8 @@ return require('packer').startup(function(use)
 
   -- Colors
 
-  use({ 'rose-pine/neovim', as = 'rose-pine' })
-  use({ "ellisonleao/gruvbox.nvim", as = 'gruvbox' })
+  use({ "ellisonleao/gruvbox.nvim" })
+  use({ "folke/tokyonight.nvim" })
 
   --  Treesitter
 
@@ -84,9 +85,14 @@ return require('packer').startup(function(use)
     end
   }
 
-  -- Legendary
+  -- Smart column
 
-  use 'mrjones2014/legendary.nvim'
+  use {
+    "m4xshen/smartcolumn.nvim",
+    config = function()
+      require("smartcolumn").setup()
+    end
+  }
 
   -- Fzf
   use { 'ibhagwan/fzf-lua',
@@ -94,5 +100,4 @@ return require('packer').startup(function(use)
     requires = { 'nvim-tree/nvim-web-devicons' }
   }
   use = { 'junegunn/fzf', run = './install --bin', }
-
 end)
