@@ -10,6 +10,7 @@ return require('packer').startup(function(use)
   -- Colors
 
   use({ 'rose-pine/neovim', as = 'rose-pine' })
+  use({ "ellisonleao/gruvbox.nvim", as = 'gruvbox' })
 
   --  Treesitter
 
