@@ -26,5 +26,8 @@ require'nvim-treesitter.configs'.setup {
     "html",
     "surface"
   },
-  highlight = {enable = true}
+  highlight = {enable = true},
+  autotag = {
+    enable = true
+  }
 }

@@ -94,6 +94,13 @@ return require('packer').startup(function(use)
     end
   }
 
+  -- Autopairs
+
+  use {
+    "windwp/nvim-autopairs",
+      config = function() require("nvim-autopairs").setup {} end
+  }
+
   -- Fzf
   use { 'ibhagwan/fzf-lua',
     -- optional for icon support

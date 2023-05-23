@@ -8,6 +8,6 @@ function loadTheme(color)
   vim.o.background = "dark"
 end
 
--- loadTheme()
+loadTheme()
 
-loadTheme("tokyonight-night")
+-- loadTheme("tokyonight-night")
