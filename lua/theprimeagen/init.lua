@@ -1,7 +1,0 @@
-require("theprimeagen.remap")
-require("theprimeagen.set")
-require("theprimeagen.terminal")
-require("theprimeagen.easydir")
-require("theprimeagen.explore")
-require("theprimeagen.fzf")
-require("theprimeagen.dressing")

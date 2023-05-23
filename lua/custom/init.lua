@@ -1,0 +1,7 @@
+require("custom.remap")
+require("custom.set")
+require("custom.terminal")
+require("custom.easydir")
+require("custom.explore")
+require("custom.fzf")
+require("custom.dressing")
