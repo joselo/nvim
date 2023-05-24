@@ -2,12 +2,13 @@ function loadTheme(color)
 	color = color or "gruvbox"
 	vim.cmd.colorscheme(color)
 
-	vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
-	vim.api.nvim_set_hl(0, "NormalFloat", { bg = "none" })
+	-- vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
+	-- vim.api.nvim_set_hl(0, "NormalFloat", { bg = "none" })
 
-  vim.o.background = "dark"
+  -- vim.o.background = "dark"
 end
 
-loadTheme()
-
+-- loadTheme()
 -- loadTheme("tokyonight-night")
+
+loadTheme("dayfox")

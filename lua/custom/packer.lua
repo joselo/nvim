@@ -108,6 +108,10 @@ return require('packer').startup(function(use)
     config = function() require('oil').setup() end
   }
 
+  -- Nightfox
+
+  use "EdenEast/nightfox.nvim"
+
   -- Fzf
   use { 'ibhagwan/fzf-lua',
     -- optional for icon support
