@@ -101,6 +101,13 @@ return require('packer').startup(function(use)
       config = function() require("nvim-autopairs").setup {} end
   }
 
+  -- Oil
+
+  use {
+    'stevearc/oil.nvim',
+    config = function() require('oil').setup() end
+  }
+
   -- Fzf
   use { 'ibhagwan/fzf-lua',
     -- optional for icon support
