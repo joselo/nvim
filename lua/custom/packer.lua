@@ -12,6 +12,7 @@ return require('packer').startup(function(use)
 
   use({ "ellisonleao/gruvbox.nvim" })
   use({ "folke/tokyonight.nvim" })
+  use({ "EdenEast/nightfox.nvim" })
 
   --  Treesitter
 
@@ -107,10 +108,6 @@ return require('packer').startup(function(use)
     'stevearc/oil.nvim',
     config = function() require('oil').setup() end
   }
-
-  -- Nightfox
-
-  use "EdenEast/nightfox.nvim"
 
   -- Fzf
   use { 'ibhagwan/fzf-lua',
