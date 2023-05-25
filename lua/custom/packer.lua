@@ -88,12 +88,7 @@ return require('packer').startup(function(use)
 
   -- Smart column
 
-  use {
-    "m4xshen/smartcolumn.nvim",
-    config = function()
-      require("smartcolumn").setup()
-    end
-  }
+  use { "m4xshen/smartcolumn.nvim" }
 
   -- Autopairs
 
