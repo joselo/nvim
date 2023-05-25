@@ -1,6 +1,6 @@
 local keymap = vim.keymap.set
 
-keymap("n", "<C-\\>", vim.cmd.term)
+keymap("n", "<C-\\>", ":belowright split | terminal<cr>i")
 
 local n_opts = {silent = true, noremap = true}
 local t_opts = {silent = true}
