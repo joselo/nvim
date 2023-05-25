@@ -14,5 +14,5 @@ end
 -- loadTheme()
 -- loadTheme("tokyonight-night")
 
--- loadTheme("terafox", false)
-loadTheme("dayfox", false)
+loadTheme("terafox", true)
+-- loadTheme("dayfox", false)
