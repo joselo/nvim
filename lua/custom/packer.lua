@@ -109,6 +109,10 @@ return require('packer').startup(function(use)
     config = function() require('oil').setup() end
   }
 
+  -- Indent blankline
+
+  use { "lukas-reineke/indent-blankline.nvim" }
+
   -- Fzf
   use { 'ibhagwan/fzf-lua',
     -- optional for icon support
