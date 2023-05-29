@@ -29,8 +29,3 @@ keymap("v", "<S-Tab>", "<gv")
 keymap("n", "<C-Left>", vim.cmd.tabprevious)
 keymap("n", "<C-Right>", vim.cmd.tabnext)
 keymap("n", "<C-\\>", vim.cmd.tabnew)
-
--- Edit files in the same buffer directory
--- keymap("c", "e.", "edit <C-r>=expand("%:h")<cr>/")
-
--- cnoremap e. edit <c-r>=expand("%:h")<cr>/

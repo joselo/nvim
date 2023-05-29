@@ -1,7 +1,6 @@
 require("custom.remap")
 require("custom.set")
 require("custom.easydir")
-require("custom.explore")
 require("custom.fzf")
 require("custom.terminal")
 require("custom.smartcolumn")
