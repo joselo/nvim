@@ -1,6 +1,10 @@
 local keymap = vim.keymap.set
+local api = vim.api
 
-keymap("n", "<C-t>", ":belowright split | terminal<cr>i")
+keymap("n", "<C-t>", ":belowright split | terminal<cr>i")      -- starts in insert mode
+
+api.nvim_command("autocmd TermOpen * setlocal nonumber")       -- no numbers
+api.nvim_command("autocmd TermEnter * setlocal signcolumn=no") -- no sign column
 
 local n_opts = {silent = true, noremap = true}
 local t_opts = {silent = true}
