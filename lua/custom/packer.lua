@@ -56,20 +56,13 @@ return require('packer').startup(function(use)
   }
 
   -- Diffview
+
   use "sindrets/diffview.nvim" 
 
 
   -- Icons (Used for some packs"
 
   use "nvim-tree/nvim-web-devicons"
-
-  --  Dressing
-  use { "chrisgrieser/nvim-genghis", requires = {
-      "stevearc/dressing.nvim",
-      "hrsh7th/nvim-cmp",
-      "hrsh7th/cmp-omni"
-    }
-  }
 
   -- Which-key
 
