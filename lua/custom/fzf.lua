@@ -5,7 +5,7 @@ vim.keymap.set("n", "<C-b>",
   "<cmd>lua require('fzf-lua').buffers()<CR>", { silent = true })
 
 vim.keymap.set("n", "<C-g>",
-  "<cmd>lua require('fzf-lua').live_grep()<CR>", { silent = true })
+  "<cmd>lua require('fzf-lua').grep_project()<CR>", { silent = true })
 
 vim.keymap.set("n", "<C-f>",
   "<cmd>lua require('fzf-lua').blines()<CR>", { silent = true })
