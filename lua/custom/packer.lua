@@ -101,6 +101,20 @@ return require('packer').startup(function(use)
 
   use { "lukas-reineke/indent-blankline.nvim" }
 
+  -- Spaceless: Automatically strip trailing whitespace as you are editing. 
+
+  use {
+    'lewis6991/spaceless.nvim',
+    config = function()
+      require'spaceless'.setup()
+    end
+  }
+
+  -- Cellular automaton
+
+  use 'eandrju/cellular-automaton.nvim'
+
+
   -- Fzf
   use { 'ibhagwan/fzf-lua',
     -- optional for icon support
