@@ -13,6 +13,7 @@ return require('packer').startup(function(use)
   use({ "ellisonleao/gruvbox.nvim" })
   use({ "folke/tokyonight.nvim" })
   use({ "EdenEast/nightfox.nvim" })
+  use({ "savq/melange-nvim" })
 
   --  Treesitter
 
@@ -33,10 +34,10 @@ return require('packer').startup(function(use)
   -- Comment
 
   use {
-      'numToStr/Comment.nvim',
-      config = function()
-          require('Comment').setup()
-      end
+    'numToStr/Comment.nvim',
+    config = function()
+        require('Comment').setup()
+    end
   }
 
   -- Aerial
@@ -110,15 +111,11 @@ return require('packer').startup(function(use)
     end
   }
 
-  -- Cellular automaton
-
-  use 'eandrju/cellular-automaton.nvim'
-
-
   -- Fzf
   use { 'ibhagwan/fzf-lua',
     -- optional for icon support
     requires = { 'nvim-tree/nvim-web-devicons' }
   }
+
   use = { 'junegunn/fzf', run = './install --bin', }
 end)
