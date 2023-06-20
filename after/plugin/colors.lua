@@ -13,7 +13,6 @@ function loadTheme(color, bg)
 end
 
 -- loadTheme()
--- loadTheme("tokyonight-night")
 
 -- loadTheme("terafox", true)
 -- loadTheme("dayfox", false)

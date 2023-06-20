@@ -9,7 +9,6 @@ require'nvim-treesitter.configs'.setup {
     "javascript",
     "elixir",
     "eex",
-    "elixir",
     "erlang",
     "heex",
     "html",
@@ -34,7 +33,11 @@ require'nvim-treesitter.configs'.setup {
   },
   highlight = {enable = true},
   autotag = {
-    enable = true
+    enable = true,
+    enable_rename = true,
+    enable_close = true,
+    enable_close_on_slash = true,
+    filetypes = { "html" , "xml", "heex", "eex", "ex", "elixir", "lua" }
   },
   indent = {
     enable = true

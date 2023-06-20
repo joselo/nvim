@@ -11,7 +11,6 @@ return require('packer').startup(function(use)
   -- Colors
 
   use({ "ellisonleao/gruvbox.nvim" })
-  use({ "folke/tokyonight.nvim" })
   use({ "EdenEast/nightfox.nvim" })
   use({ "savq/melange-nvim" })
 
@@ -120,6 +119,15 @@ return require('packer').startup(function(use)
         log_level = "error",
         auto_session_suppress_dirs = { "~/", "~/Code", "~/Downloads", "/"},
       }
+    end
+  }
+
+  -- Auto tags
+
+  use {
+    'windwp/nvim-ts-autotag',
+    config = function()
+      require('nvim-ts-autotag').setup()
     end
   }
 
