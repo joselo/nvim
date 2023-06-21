@@ -57,8 +57,7 @@ return require('packer').startup(function(use)
 
   -- Diffview
 
-  use "sindrets/diffview.nvim" 
-
+  use({ "sindrets/diffview.nvim"})
 
   -- Icons (Used for some packs"
 
@@ -135,6 +134,29 @@ return require('packer').startup(function(use)
   use { 'ibhagwan/fzf-lua',
     -- optional for icon support
     requires = { 'nvim-tree/nvim-web-devicons' }
+  }
+
+  -- LSP
+
+  use {
+    'VonHeikemen/lsp-zero.nvim',
+    branch = 'v2.x',
+    requires = {
+      -- LSP Support
+      {'neovim/nvim-lspconfig'},             -- Required
+      {                                      -- Optional
+        'williamboman/mason.nvim',
+        run = function()
+          pcall(vim.cmd, 'MasonUpdate')
+        end,
+      },
+      {'williamboman/mason-lspconfig.nvim'}, -- Optional
+
+      -- Autocompletion
+      {'hrsh7th/nvim-cmp'},     -- Required
+      {'hrsh7th/cmp-nvim-lsp'}, -- Required
+      {'L3MON4D3/LuaSnip'},     -- Required
+    }
   }
 
   use = { 'junegunn/fzf', run = './install --bin', }
