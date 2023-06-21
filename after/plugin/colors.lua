@@ -3,18 +3,18 @@ function loadTheme(color, bg)
 
 	vim.cmd.colorscheme(color)
 
+  vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
+  vim.api.nvim_set_hl(0, "NormalFloat", { bg = "none" })
+  vim.opt.termguicolors = true
+
   if bg then
-    vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
-    vim.api.nvim_set_hl(0, "NormalFloat", { bg = "none" })
-    vim.opt.termguicolors = true
+    vim.o.background = "dark"
+  else
+    vim.o.background = "light"
   end
-
-  -- vim.o.background = "dark"
 end
-
--- loadTheme()
 
 -- loadTheme("terafox", true)
 -- loadTheme("dayfox", false)
 
-loadTheme("melange", true)
+loadTheme("melange", false)
