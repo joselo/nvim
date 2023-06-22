@@ -1,4 +1,4 @@
-function loadTheme(color, bg)
+function loadTheme(color, light)
 	color = color or "gruvbox"
 
 	vim.cmd.colorscheme(color)
@@ -7,9 +7,7 @@ function loadTheme(color, bg)
   vim.api.nvim_set_hl(0, "NormalFloat", { bg = "none" })
   vim.opt.termguicolors = true
 
-  if bg then
-    vim.o.background = "dark"
-  else
+  if light then
     vim.o.background = "light"
   end
 end
