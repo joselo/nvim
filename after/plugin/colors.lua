@@ -15,4 +15,4 @@ end
 -- loadTheme("terafox", true)
 -- loadTheme("dayfox", false)
 
-loadTheme("melange", false)
+loadTheme("melange", true)

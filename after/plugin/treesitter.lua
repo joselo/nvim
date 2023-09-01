@@ -12,7 +12,8 @@ require'nvim-treesitter.configs'.setup {
     "erlang",
     "heex",
     "html",
-    "surface"
+    "surface",
+    "query"
   },
 
   -- Install parsers synchronously (only applied to `ensure_installed`)
