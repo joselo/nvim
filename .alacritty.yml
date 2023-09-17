@@ -423,7 +423,7 @@ schemes:
 
 
 # Apply the color scheme.
-colors: *papercolor
+colors: *papercolor_dark
 
 # Bell
 #

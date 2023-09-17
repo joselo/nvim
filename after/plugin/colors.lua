@@ -9,10 +9,12 @@ function loadTheme(color, light)
 
   if light then
     vim.o.background = "light"
+  else
+    vim.o.background = "dark"
   end
 end
 
 -- loadTheme("terafox", true)
 -- loadTheme("dayfox", false)
 
-loadTheme("melange", true)
+loadTheme("melange", false)
