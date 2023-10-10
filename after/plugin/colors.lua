@@ -18,3 +18,4 @@ end
 -- loadTheme("dayfox", false)
 
 loadTheme("melange", false)
+-- loadTheme("melange", true)

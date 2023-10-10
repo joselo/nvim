@@ -100,7 +100,7 @@ return require('packer').startup(function(use)
 
   use { "lukas-reineke/indent-blankline.nvim" }
 
-  -- Spaceless: Automatically strip trailing whitespace as you are editing. 
+  -- Spaceless: Automatically strip trailing whitespace as you are editing.
 
   use {
     'lewis6991/spaceless.nvim',
@@ -110,16 +110,16 @@ return require('packer').startup(function(use)
   }
 
   -- Autosave sessions
-
-  use {
-    'rmagatti/auto-session',
-    config = function()
-      require("auto-session").setup {
-        log_level = "error",
-        auto_session_suppress_dirs = { "~/", "~/Code", "~/Downloads", "/"},
-      }
-    end
-  }
+  --
+  -- use {
+  --   'rmagatti/auto-session',
+  --   config = function()
+  --     require("auto-session").setup {
+  --       log_level = "error",
+  --       auto_session_suppress_dirs = { "~/", "~/Code", "~/Downloads", "/"},
+  --     }
+  --   end
+  -- }
 
   -- Auto tags
 
