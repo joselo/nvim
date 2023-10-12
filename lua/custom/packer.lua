@@ -110,16 +110,16 @@ return require('packer').startup(function(use)
   }
 
   -- Autosave sessions
-  --
-  -- use {
-  --   'rmagatti/auto-session',
-  --   config = function()
-  --     require("auto-session").setup {
-  --       log_level = "error",
-  --       auto_session_suppress_dirs = { "~/", "~/Code", "~/Downloads", "/"},
-  --     }
-  --   end
-  -- }
+
+  use {
+    'rmagatti/auto-session',
+    config = function()
+      require("auto-session").setup {
+        log_level = "error",
+        auto_session_suppress_dirs = { "~/", "~/Code", "~/Downloads", "/"},
+      }
+    end
+  }
 
   -- Auto tags
 
@@ -134,6 +134,18 @@ return require('packer').startup(function(use)
   use { 'ibhagwan/fzf-lua',
     -- optional for icon support
     requires = { 'nvim-tree/nvim-web-devicons' }
+  }
+
+
+  -- Nvim-neo-tree
+
+  use { "nvim-neo-tree/neo-tree.nvim",
+    branch = "v3.x",
+    requires = {
+      "nvim-lua/plenary.nvim",
+      "nvim-tree/nvim-web-devicons", -- not strictly required, but recommended
+      "MunifTanjim/nui.nvim",
+    }
   }
 
   use = { 'junegunn/fzf', run = './install --bin', }
