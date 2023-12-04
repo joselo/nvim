@@ -1,7 +1,2 @@
-require("custom.remap")
-require("custom.set")
-require("custom.easydir")
-require("custom.fzf")
+require("custom.options")
 require("custom.terminal")
-require("custom.smartcolumn")
--- require("custom.neotree")
