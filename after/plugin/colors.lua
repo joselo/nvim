@@ -1,4 +1,4 @@
-function loadTheme(color, light)
+function loadTheme(color, dark)
 	color = color or "gruvbox"
 
 	vim.cmd.colorscheme(color)
@@ -9,15 +9,11 @@ function loadTheme(color, light)
 
   -- This is commented because I want to have a transparent background
 
-  -- if light then
-  --   vim.o.background = "light"
-  -- else
-  --   vim.o.background = "dark"
-  -- end
+  if dark then
+    vim.o.background = "dark"
+  else
+    vim.o.background = "light"
+  end
 end
 
--- loadTheme("terafox", true)
--- loadTheme("dayfox", false)
-
-loadTheme("melange", false)
--- loadTheme("melange", true)
+loadTheme("melange", true)
