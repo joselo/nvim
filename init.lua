@@ -13,8 +13,8 @@ end
 
 vim.opt.rtp:prepend(lazypath)
 
-require("lazy").setup({{import = "plugins"}, {import = "plugins.themes"}})
 require("custom")
+require("lazy").setup({{import = "plugins"}, {import = "plugins.themes"}})
 
 -- Theme
 vim.opt.termguicolors = true
