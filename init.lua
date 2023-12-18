@@ -18,4 +18,5 @@ require("lazy").setup({{import = "plugins"}, {import = "plugins.themes"}})
 
 -- Theme
 vim.opt.termguicolors = true
-vim.cmd.colorscheme 'melange'
+-- vim.cmd.colorscheme 'melange'
+vim.cmd.colorscheme 'monet'

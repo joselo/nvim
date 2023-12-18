@@ -3,6 +3,7 @@ local keymap = vim.keymap.set
 -- Leader key
 vim.keymap.set("n", " ", "<Nop>", { silent = true, remap = false })
 vim.g.mapleader = " "
+vim.g.maplocalleader = " "
 
 -- Open path in a buffer
 keymap("n", "<C-W><C-S-F>", "<C-W>vgF")
