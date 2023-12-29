@@ -1,3 +1,3 @@
 # Dependencies
 
-pacman -S nerd-fonts fzf the_silver_searcher 
+pacman -Sy nerd-fonts fzf the_silver_searcher 
