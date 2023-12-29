@@ -14,3 +14,8 @@ keymap("n", "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]],
 -- Tab/Shift+tab to indent/dedent
 keymap("v", "<Tab>", ">gv")
 keymap("v", "<S-Tab>", "<gv")
+
+-- Tabs navigation
+keymap("n", "<C-Left>", vim.cmd.tabprevious)
+keymap("n", "<C-Right>", vim.cmd.tabnext)
+keymap("n", "<C-\\>", vim.cmd.tabnew)
