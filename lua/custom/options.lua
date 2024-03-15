@@ -36,3 +36,6 @@ vim.opt.guitablabel = "%t"
 
 -- auto ident
 vim.opt.autoindent = true
+
+-- highlight search words
+vim.opt.hlsearch = true
