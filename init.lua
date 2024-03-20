@@ -30,3 +30,7 @@ vim.cmd.colorscheme 'melange'
 -- vim.cmd('colorscheme github_dark_default')
 -- vim.cmd('colorscheme github_light_default')
 -- vim.cmd('colorscheme github_light')
+
+-- vim.cmd.colorscheme 'gruvbox'
+
+-- vim.cmd.colorscheme 'miasma'
