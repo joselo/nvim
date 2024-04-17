@@ -3,7 +3,8 @@ return {
   dependencies = {
     "nvim-lua/plenary.nvim",
     "antoinemadec/FixCursorHold.nvim",
-    "jfpedroza/neotest-elixir"
+    "jfpedroza/neotest-elixir",
+    "nvim-neotest/nvim-nio"
   },
   config = function()
     local neotest = require("neotest")
