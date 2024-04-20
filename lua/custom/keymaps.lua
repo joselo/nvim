@@ -19,3 +19,6 @@ keymap("v", "<S-Tab>", "<gv")
 keymap("n", "<C-Left>", vim.cmd.tabprevious)
 keymap("n", "<C-Right>", vim.cmd.tabnext)
 keymap("n", "<C-\\>", vim.cmd.tabnew)
+
+-- yank to clipboard
+vim.keymap.set({"n", "v"}, "<leader>y", [["+y]])
