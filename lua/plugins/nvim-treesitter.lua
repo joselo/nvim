@@ -7,7 +7,6 @@ return {
     treesitter.setup {
       -- A list of parser names, or "all" (the five listed parsers should always be installed)
       ensure_installed = {
-        "c",
         "lua",
         "vim",
         "vimdoc",
@@ -17,9 +16,7 @@ return {
         "eex",
         "erlang",
         "heex",
-        "html",
-        "surface",
-        "query"
+        "html"
       },
 
       -- Install parsers synchronously (only applied to `ensure_installed`)
@@ -46,9 +43,12 @@ return {
         enable_close_on_slash = true,
         filetypes = { "html" , "xml", "heex", "eex", "ex", "elixir", "lua" }
       },
+
       indent = {
         enable = true
-      }
+      },
+
+      prefer_git = true,
     }
-    end
+  end
 }

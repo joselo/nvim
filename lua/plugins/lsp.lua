@@ -1,35 +1,37 @@
 return {
-  "neovim/nvim-lspconfig",
+  "elixir-tools/elixir-tools.nvim",
+  version = "*",
+  event = { "BufReadPre", "BufNewFile" },
   config = function()
-    -- generic LSP settings
-    --
-    -- ---@usage disable automatic installation of servers
-    -- lvim.lsp.automatic_servers_installation = false
-    local lspconfig = require("lspconfig")
+    local elixir = require("elixir")
+    local elixirls = require("elixir.elixirls")
 
-    -- Neovim doesn't support snippets out of the box, so we need to mutate the
-    -- capabilities we send to the language server to let them know we want snippets.
-    local capabilities = vim.lsp.protocol.make_client_capabilities()
-    capabilities.textDocument.completion.completionItem.snippetSupport = true
+    elixir.setup {
+      nextls = {enable = false},
+      credo = {},
+      elixirls = {
+        cmd = "/home/joselo/.elixir-ls/language_server.sh",
+        enable = true,
+        settings = elixirls.settings {
+          dialyzerEnabled = false,
+          enableTestLenses = false,
+        },
+        on_attach = function(client, bufnr)
+          vim.keymap.set("n", "<space>fp", ":ElixirFromPipe<cr>", { buffer = true, noremap = true })
+          vim.keymap.set("n", "<space>tp", ":ElixirToPipe<cr>", { buffer = true, noremap = true })
+          vim.keymap.set("v", "<space>em", ":ElixirExpandMacro<cr>", { buffer = true, noremap = true })
 
-
-    -- ---configure a server manually. !!Requires `:LvimCacheReset` to take effect!!
-    -- ---see the full default list `:lua print(vim.inspect(lvim.lsp.automatic_configuration.skipped_servers))`
-    -- vim.list_extend(lvim.lsp.automatic_configuration.skipped_servers, { "pyright" })
-    -- local opts = {} -- check the lspconfig documentation for a list of all possible options
-    -- require("lvim.lsp.manager").setup("pyright", opts)
-    -- Elixir LS
-    lspconfig.elixirls.setup {
-      cmd = { "/home/joselo/.elixir-ls/language_server.sh" },
-      -- on_attach = custom_attach, -- this may be required for extended functionalities of the LSP
-      capabilities = capabilities,
-      flags = {
-        debounce_text_changes = 150,
-      },
-      elixirLS = {
-        dialyzerEnabled = false,
-        fetchDeps = false,
-      };
+          vim.keymap.set("n", "<space>df", "<cmd>lua vim.lsp.buf.formatting_seq_sync()<cr>", map_opts)
+          vim.keymap.set("n", "<space>gd", "<cmd>lua vim.diagnostic.open_float()<cr>", map_opts)
+          vim.keymap.set("n", "<space>dt", "<cmd>lua vim.lsp.buf.definition()<cr>", map_opts)
+          vim.keymap.set("n", "<space>K", "<cmd>lua vim.lsp.buf.hover()<cr>", map_opts)
+          vim.keymap.set("n", "<space>gD","<cmd>lua vim.lsp.buf.implementation()<cr>", map_opts)
+          vim.keymap.set("n", "<space>1gD","<cmd>lua vim.lsp.buf.type_definition()<cr>", map_opts)
+        end,
+      }
     }
-  end
+  end,
+  dependencies = {
+    "nvim-lua/plenary.nvim",
+  },
 }

@@ -17,12 +17,12 @@ require("custom")
 require("lazy").setup({{import = "plugins"}, {import = "plugins.themes"}})
 
 -- Theme
-vim.opt.termguicolors = true
+-- vim.opt.termguicolors = true
 -- vim.cmd.colorscheme 'melange'
-vim.cmd.colorscheme 'monet'
+-- vim.cmd.colorscheme 'monet'
 
 -- vim.cmd("colorscheme rose-pine")
--- vim.cmd("colorscheme rose-pine-main")
+vim.cmd("colorscheme rose-pine-main")
 -- vim.cmd("colorscheme rose-pine-moon")
 -- vim.cmd("colorscheme rose-pine-dawn")
 
