@@ -21,4 +21,9 @@ keymap("n", "<C-Right>", vim.cmd.tabnext)
 keymap("n", "<C-\\>", vim.cmd.tabnew)
 
 -- yank to clipboard
-vim.keymap.set({"n", "v"}, "<leader>y", [["+y]])
+keymap({"n", "v"}, "<leader>y", [["+y]])
+
+-- buffers
+keymap("n", "<leader>n", ":bn<cr>")
+keymap("n", "<leader>p", ":bp<cr>")
+keymap("n", "<leader>x", ":bd<cr>")
