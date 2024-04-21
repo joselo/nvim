@@ -17,8 +17,8 @@ require("custom")
 require("lazy").setup({{import = "plugins"}, {import = "plugins.themes"}, {import = "plugins.lsp"}})
 
 -- Theme
-vim.opt.termguicolors = true
-vim.cmd.colorscheme 'melange'
+-- vim.opt.termguicolors = true
+-- vim.cmd.colorscheme 'melange'
 -- vim.cmd.colorscheme 'monet'
 
 -- vim.cmd("colorscheme rose-pine")
@@ -34,3 +34,6 @@ vim.cmd.colorscheme 'melange'
 -- vim.cmd.colorscheme 'gruvbox'
 
 -- vim.cmd.colorscheme 'miasma'
+--
+-- vim.cmd("colorscheme nightfox")
+vim.cmd.colorscheme 'terafox'
