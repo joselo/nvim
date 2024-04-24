@@ -26,4 +26,4 @@ keymap({"n", "v"}, "<leader>y", [["+y]])
 -- buffers
 keymap("n", "<leader>n", ":bn<cr>")
 keymap("n", "<leader>p", ":bp<cr>")
-keymap("n", "<leader>x", ":bd<cr>")
+keymap("n", "<leader>x", ":BufDel<cr>")
