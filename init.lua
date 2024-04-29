@@ -36,4 +36,5 @@ require("lazy").setup({{import = "plugins"}, {import = "plugins.themes"}, {impor
 -- vim.cmd.colorscheme 'miasma'
 --
 -- vim.cmd("colorscheme nightfox")
-vim.cmd.colorscheme 'terafox'
+-- vim.cmd.colorscheme 'terafox'
+vim.cmd.colorscheme 'duskfox'
