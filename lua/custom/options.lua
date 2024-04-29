@@ -32,7 +32,7 @@ vim.opt.updatetime = 50
 vim.opt.wrap = true
 
 -- display only file name in tabs
-vim.opt.guitablabel = "%t"
+--vim.opt.guitablabel = "%t"
 
 -- auto ident
 vim.opt.autoindent = true
