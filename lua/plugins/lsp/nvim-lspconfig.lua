@@ -21,7 +21,7 @@ return {
 
     require('mason-lspconfig').setup({
       ensure_installed = {
-        "elixirls",
+        "lexical",
         "rust_analyzer"
       },
       handlers = {
@@ -40,34 +40,35 @@ return {
       }
     })
 
-    -- Configure ElixirLS as the LSP server for Elixir.
-    require'lspconfig'.elixirls.setup{
-      cmd = { "/home/joselo/.elixir-ls/language_server.sh" },
-      -- on_attach = custom_attach, -- this may be required for extended functionalities of the LSP
-      capabilities = capabilities,
-      flags = {
-        debounce_text_changes = 150,
-      },
-      elixirLS = {
-        dialyzerEnabled = false,
-        fetchDeps = false,
-      };
+    local lspconfig = require("lspconfig")
+    local configs = require("lspconfig.configs")
+
+    -- Lexical
+    local lexical_config = {
+      filetypes = { "elixir", "eelixir", "heex" },
+      cmd = { "/home/joselo/.lexical/bin/start_lexical.sh" },
+      settings = {},
     }
 
-    -- Configure ElixirLS as the LSP server for Elixir.
-    require'lspconfig'.rust_analyzer.setup{
-      checkOnSave = { command = "clippy" }
+    if not configs.lexical then
+      configs.lexical = {
+        default_config = {
+          filetypes = lexical_config.filetypes,
+          cmd = lexical_config.cmd,
+          root_dir = function(fname)
+            return lspconfig.util.root_pattern("mix.exs", ".git")(fname) or vim.loop.os_homedir()
+          end,
+          -- optional settings
+          settings = lexical_config.settings,
+        },
+      }
+    end
 
-      -- cmd = { "/home/joselo/.elixir-ls/language_server.sh" },
-      -- -- on_attach = custom_attach, -- this may be required for extended functionalities of the LSP
-      -- capabilities = capabilities,
-      -- flags = {
-      --   debounce_text_changes = 150,
-      -- },
-      -- elixirLS = {
-      --   dialyzerEnabled = false,
-      --   fetchDeps = false,
-      -- };
-    }
+    lspconfig.lexical.setup({})
+
+    -- Rust
+    -- require'lspconfig'.rust_analyzer.setup{
+    --   checkOnSave = { command = "clippy" }
+    -- }
   end
 }
