@@ -67,8 +67,8 @@ return {
     lspconfig.lexical.setup({})
 
     -- Rust
-    -- require'lspconfig'.rust_analyzer.setup{
-    --   checkOnSave = { command = "clippy" }
-    -- }
+    lspconfig.rust_analyzer.setup({
+      checkOnSave = { command = "clippy" }
+    })
   end
 }
