@@ -1,3 +1,3 @@
 # Dependencies
 
-pacman -Sy nerd-fonts fzf the_silver_searcher
+sudo apt install ripgrep
