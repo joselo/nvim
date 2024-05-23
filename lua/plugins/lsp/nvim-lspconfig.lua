@@ -22,7 +22,6 @@ return {
     require('mason-lspconfig').setup({
       ensure_installed = {
         "rust_analyzer"
-        -- "nextls",
       },
       handlers = {
         -- this first function is the "default handler"
@@ -47,19 +46,5 @@ return {
     lspconfig.rust_analyzer.setup({
       checkOnSave = { command = "clippy" }
     })
-
-    -- Nextls
-    -- lspconfig.nextls.setup({
-    --   cmd = {"nextls", "--stdio"},
-    --   init_options = {
-    --     extensions = {
-    --       credo = { enable = true }
-    --     },
-    --     experimental = {
-    --       completions = { enable = true }
-    --     }
-    --   }
-    -- })
-
   end
 }
