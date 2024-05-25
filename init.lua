@@ -14,11 +14,11 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 require("custom")
-require("lazy").setup({{import = "plugins"}, {import = "plugins.themes"}, {import = "plugins.lsp"}})
--- require("lazy").setup({{import = "plugins"}, {import = "plugins.themes"}})
+-- require("lazy").setup({{import = "plugins"}, {import = "plugins.themes"}, {import = "plugins.lsp"}})
+require("lazy").setup({{import = "plugins"}, {import = "plugins.themes"}})
 
 -- Theme
--- vim.opt.termguicolors = true
+vim.opt.termguicolors = true
 -- vim.cmd.colorscheme 'melange'
 vim.cmd.colorscheme 'monet'
 
