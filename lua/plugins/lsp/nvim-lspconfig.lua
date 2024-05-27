@@ -21,6 +21,7 @@ return {
 
     require('mason-lspconfig').setup({
       ensure_installed = {
+        "elixirls",
         "rust_analyzer"
       },
       handlers = {
@@ -45,6 +46,20 @@ return {
     -- Rust
     lspconfig.rust_analyzer.setup({
       checkOnSave = { command = "clippy" }
+    })
+
+    -- ElixirLS
+    lspconfig.elixirls.setup({
+      cmd = { "/home/joselo/.elixir-ls/language_server.sh" },
+      -- on_attach = custom_attach, -- this may be required for extended functionalities of the LSP
+      capabilities = capabilities,
+      flags = {
+        debounce_text_changes = 150,
+      },
+      elixirLS = {
+        dialyzerEnabled = false,
+        fetchDeps = false,
+      }
     })
   end
 }
