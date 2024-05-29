@@ -22,7 +22,8 @@ return {
     require('mason-lspconfig').setup({
       ensure_installed = {
         "elixirls",
-        "rust_analyzer"
+        "rust_analyzer",
+        "lua_ls"
       },
       handlers = {
         -- this first function is the "default handler"
