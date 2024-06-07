@@ -42,7 +42,6 @@ return {
     })
 
     local lspconfig = require("lspconfig")
-    local configs = require("lspconfig.configs")
 
     -- Rust
     lspconfig.rust_analyzer.setup({
@@ -51,9 +50,6 @@ return {
 
     -- ElixirLS
     lspconfig.elixirls.setup({
-      cmd = { "/home/joselo/.elixir-ls/language_server.sh" },
-      -- on_attach = custom_attach, -- this may be required for extended functionalities of the LSP
-      capabilities = capabilities,
       flags = {
         debounce_text_changes = 150,
       },
