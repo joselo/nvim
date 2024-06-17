@@ -23,7 +23,8 @@ return {
       ensure_installed = {
         "elixirls",
         "rust_analyzer",
-        "lua_ls"
+        "lua_ls",
+        "kotlin_language_server"
       },
       handlers = {
         -- this first function is the "default handler"
@@ -57,6 +58,19 @@ return {
         dialyzerEnabled = false,
         fetchDeps = false,
       }
+    })
+
+    -- Kotlin
+    lspconfig.kotlin_language_server.setup({
+      filetypes = { "kotlin" },
+      kotlin = {
+        -- formatters = {
+        --   ignoreComments = true,
+        -- },
+        signatureHelp = { enabled = true }
+      },
+      workspace = { checkThirdParty = false },
+      telemetry = { enabled = false }
     })
   end
 }
