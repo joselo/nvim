@@ -36,8 +36,11 @@ vim.opt.termguicolors = true
 
 -- vim.cmd.colorscheme 'miasma'
 
-vim.cmd("colorscheme nightfox")
+-- vim.cmd("colorscheme nightfox")
 -- vim.cmd.colorscheme 'terafox'
 
 -- vim.cmd.colorscheme 'kanagawa-wave'
+
+-- vim.cmd.colorscheme('catppuccin-mocha')
+vim.cmd.colorscheme('tokyonight-night')
 
