@@ -41,5 +41,6 @@ vim.opt.termguicolors = true
 -- vim.cmd.colorscheme 'kanagawa-wave'
 
 -- vim.cmd.colorscheme('catppuccin-mocha')
-vim.cmd.colorscheme('tokyonight-night')
+-- vim.cmd.colorscheme('tokyonight-night')
+vim.cmd.colorscheme 'dayfox'
 
