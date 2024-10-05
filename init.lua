@@ -43,5 +43,5 @@ vim.opt.termguicolors = true
 -- vim.cmd.colorscheme('catppuccin-mocha')
 -- vim.cmd.colorscheme('tokyonight-night')
 -- vim.cmd.colorscheme 'dayfox'
-vim.cmd.colorscheme 'gruvbox'
+-- vim.cmd.colorscheme 'gruvbox'
 

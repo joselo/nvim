@@ -27,3 +27,10 @@ keymap({"n", "v"}, "<leader>y", [["+y]])
 keymap("n", "<leader>n", ":bn<cr>")
 keymap("n", "<leader>p", ":bp<cr>")
 keymap("n", "<leader>x", ":BufDel<cr>")
+
+-- Copy the file paths to the clipboard
+vim.api.nvim_create_user_command("Cppath", function()
+  local path = vim.fn.expand("%:p")
+  vim.fn.setreg("+", path)
+  vim.notify('Copied "' .. path .. '" to the clipboard!')
+end, {})
