@@ -5,9 +5,6 @@ vim.keymap.set("n", " ", "<Nop>", { silent = true, remap = false })
 vim.g.mapleader = " "
 vim.g.maplocalleader = " "
 
--- Open path in a buffer
-keymap("n", "<C-W><C-S-F>", "<C-W>vgF")
-
 -- Quick search
 keymap("n", "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]], {desc = 'Quick search and replace' })
 
@@ -27,6 +24,14 @@ keymap({"n", "v"}, "<leader>y", [["+y]])
 keymap("n", "<leader>n", ":bn<cr>")
 keymap("n", "<leader>p", ":bp<cr>")
 keymap("n", "<leader>x", ":BufDel<cr>")
+
+-- Quick navigation between buffers
+-- Map Ctrl+Tab to switch to the next buffer
+vim.api.nvim_set_keymap('n', '<C-Tab>', ':bnext<CR>', { noremap = true, silent = true })
+
+-- Map Ctrl+Shift+Tab to switch to the previous buffer
+vim.api.nvim_set_keymap('n', '<C-S-Tab>', ':bprevious<CR>', { noremap = true, silent = true })
+
 
 -- Copy the file paths to the clipboard
 vim.api.nvim_create_user_command("Cppath", function()
