@@ -27,10 +27,14 @@ keymap("n", "<leader>x", ":BufDel<cr>")
 
 -- Quick navigation between buffers
 -- Map Ctrl+Tab to switch to the next buffer
-vim.api.nvim_set_keymap('n', '<C-Tab>', ':bnext<CR>', { noremap = true, silent = true })
+-- vim.api.nvim_set_keymap('n', '<C-Tab>', ':bnext<CR>', { noremap = true, silent = true })
 
 -- Map Ctrl+Shift+Tab to switch to the previous buffer
-vim.api.nvim_set_keymap('n', '<C-S-Tab>', ':bprevious<CR>', { noremap = true, silent = true })
+-- vim.api.nvim_set_keymap('n', '<C-S-Tab>', ':bprevious<CR>', { noremap = true, silent = true })
+
+-- Toggle between the last two buffer opened
+vim.api.nvim_set_keymap('n', '<C-Tab>', ':b#<CR>', { noremap = true, silent = true })
+
 
 
 -- Copy the file paths to the clipboard
