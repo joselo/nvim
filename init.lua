@@ -21,8 +21,8 @@ require("lazy").setup({{import = "plugins"}, {import = "plugins.themes"}, {impor
 -- vim.cmd.colorscheme 'melange'
 -- vim.cmd.colorscheme 'monet'
 
--- vim.cmd("colorscheme rose-pine")
-vim.cmd("colorscheme rose-pine-main")
+vim.cmd("colorscheme rose-pine")
+-- vim.cmd("colorscheme rose-pine-main")
 -- vim.cmd("colorscheme rose-pine-moon")
 -- vim.cmd("colorscheme rose-pine-dawn")
 
@@ -36,7 +36,7 @@ vim.cmd("colorscheme rose-pine-main")
 -- vim.cmd.colorscheme 'miasma'
 
 -- vim.cmd("colorscheme nightfox")
-vim.cmd.colorscheme 'terafox'
+-- vim.cmd.colorscheme 'terafox'
 
 -- vim.cmd.colorscheme 'kanagawa-wave'
 
