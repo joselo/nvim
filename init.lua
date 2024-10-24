@@ -16,8 +16,17 @@ vim.opt.rtp:prepend(lazypath)
 require("custom")
 require("lazy").setup({{import = "plugins"}, {import = "plugins.themes"}, {import = "plugins.lsp"}})
 
+-- vim.cmd("set termguicolors")
+-- vim.cmd("set background=dark")
 
-vim.cmd("set background=light")
+if os.getenv('theme') == 'light' then
+  vim.o.background = 'light'
+end
+
+vim.cmd.colorscheme 'neobones'
+
+
+-- vim.cmd("set background=light")
 
 -- Theme
 -- vim.opt.termguicolors = true
