@@ -12,15 +12,16 @@ light_theme() {
   # Set an environment variable
   export THEME="light"
   # Apply the kitty color scheme
-  kitty @ set-colors -a "$HOME/.local/share/nvim/lazy/zenbones.nvim/extras/kitty/neobones_light.conf" 
+  kitty @ set-colors -a "$HOME/.config/nvim/kitty/themes/light_theme.conf" 
 }
 
 dark_theme() {
   # Set an environment variable
   export THEME="dark"
   # Apply the kitty color scheme
-  kitty @ set-colors -a "$HOME/.local/share/nvim/lazy/zenbones.nvim/extras/kitty/neobones_dark.conf" 
+  kitty @ set-colors -a "$HOME/.config/nvim/kitty/themes/dark_theme.conf" 
 }
+
 ```
 
 Then in your terminal:

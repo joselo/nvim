@@ -16,44 +16,8 @@ vim.opt.rtp:prepend(lazypath)
 require("custom")
 require("lazy").setup({{import = "plugins"}, {import = "plugins.themes"}, {import = "plugins.lsp"}})
 
--- vim.cmd("set termguicolors")
--- vim.cmd("set background=dark")
+vim.cmd("set termguicolors")
 
 if os.getenv('theme') == 'light' then
   vim.o.background = 'light'
 end
-
-vim.cmd.colorscheme 'neobones'
-
-
--- vim.cmd("set background=light")
-
--- Theme
--- vim.opt.termguicolors = true
--- vim.cmd.colorscheme 'melange'
--- vim.cmd.colorscheme 'monet'
-
--- vim.cmd("colorscheme rose-pine")
--- vim.cmd("colorscheme rose-pine-main")
--- vim.cmd("colorscheme rose-pine-moon")
--- vim.cmd("colorscheme rose-pine-dawn")
-
--- vim.cmd('colorscheme github_dark')
--- vim.cmd('colorscheme github_dark_default')
--- vim.cmd('colorscheme github_light_default')
--- vim.cmd('colorscheme github_light')
-
--- vim.cmd.colorscheme 'gruvbox'
-
--- vim.cmd.colorscheme 'miasma'
-
--- vim.cmd("colorscheme nightfox")
--- vim.cmd.colorscheme 'terafox'
-
--- vim.cmd.colorscheme 'kanagawa-wave'
-
--- vim.cmd.colorscheme('catppuccin-mocha')
--- vim.cmd.colorscheme('tokyonight-night')
--- vim.cmd.colorscheme 'dayfox'
--- vim.cmd.colorscheme 'gruvbox'
-
