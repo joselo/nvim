@@ -1,3 +1,6 @@
+https://github.com/neovim/neovim/blob/54249d051c3e0b97321939e6a3ae3d2e83971ce7/src/nvim/highlight_group.c#L381
+
+
 Dark:
 
 - NvimDarkBlue    : !#004c73 `#004c73`
