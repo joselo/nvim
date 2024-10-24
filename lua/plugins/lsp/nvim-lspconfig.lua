@@ -24,7 +24,8 @@ return {
         "elixirls",
         "rust_analyzer",
         "lua_ls",
-        "kotlin_language_server"
+        "kotlin_language_server",
+        "solargraph"
       },
       handlers = {
         -- this first function is the "default handler"
@@ -72,5 +73,8 @@ return {
       workspace = { checkThirdParty = false },
       telemetry = { enabled = false }
     })
+
+    -- Ruby
+    lspconfig.solargraph.setup({})
   end
 }

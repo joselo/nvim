@@ -2,6 +2,12 @@
 
 sudo apt install ripgrep
 
+**Telescope extension**
+
+[zf](https://github.com/natecraddock/zf)
+
+
+
 ## Light/Dark themes in kitty
 
 

@@ -14,7 +14,14 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 require("custom")
-require("lazy").setup({{import = "plugins"}, {import = "plugins.themes"}, {import = "plugins.lsp"}})
+-- require("lazy").setup({{import = "plugins"}, {import = "plugins.themes"}, {import = "plugins.lsp"}}, { rocks = { enabled = false } })
+require("lazy").setup({
+  { import = "plugins" },
+  { import = "plugins.themes" },
+  { import = "plugins.lsp" },
+}, {
+  rocks = { enabled = false }
+})
 
 vim.cmd("set termguicolors")
 
