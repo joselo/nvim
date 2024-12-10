@@ -14,11 +14,10 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 require("custom")
--- require("lazy").setup({{import = "plugins"}, {import = "plugins.themes"}, {import = "plugins.lsp"}}, { rocks = { enabled = false } })
 require("lazy").setup({
   { import = "plugins" },
   { import = "plugins.themes" },
-  { import = "plugins.lsp" },
+  -- { import = "plugins.lsp" },
 }, {
   rocks = { enabled = false }
 })
