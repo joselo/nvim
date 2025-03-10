@@ -27,3 +27,5 @@ vim.cmd("set termguicolors")
 if os.getenv('theme') == 'light' then
   vim.o.background = 'light'
 end
+
+vim.cmd 'colorscheme neobones'

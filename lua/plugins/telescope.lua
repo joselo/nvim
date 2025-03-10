@@ -61,6 +61,12 @@ return {
           },
         }
       },
+
+      pickers = {
+        colorscheme = {
+          enable_preview = true
+        }
+      }
     })
 
     telescope.load_extension("zf-native")
