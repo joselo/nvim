@@ -1,11 +1,24 @@
 # Dependencies
 
-sudo apt install ripgrep
-
-**Telescope extension**
 
 [zf](https://github.com/natecraddock/zf)
+[ripgrep](https://github.com/BurntSushi/ripgrep)
 
+# Install dependencies in Debian
+
+
+- Install `ripgrep`
+
+    sudo apt install ripgrep
+
+- Install `zf`
+
+    $ mkdir -p ~/.local/bin
+
+
+Add the `~/.local/bin` path directory to the `~/.zshrc` file.
+
+    export PATH="$PATH:$HOME/.local/bin"
 
 
 ## Light/Dark themes in kitty

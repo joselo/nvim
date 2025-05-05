@@ -29,4 +29,5 @@ if os.getenv('theme') == 'light' then
 end
 
 -- vim.cmd 'colorscheme neobones'
-vim.cmd 'colorscheme nightfox'
+-- vim.cmd 'colorscheme nightfox'
+-- vim.cmd 'colorscheme rose-pine-main'
