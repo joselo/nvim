@@ -38,7 +38,9 @@ Add the `~/.local/bin` path directory to the `~/.zshrc` file.
 
 Add this function to the .zhrc
 
-```
+```zsh
+# Toggle kitty theme
+
 light_theme() {
   # Set an environment variable
   export THEME="light"
@@ -52,6 +54,13 @@ dark_theme() {
   # Apply the kitty color scheme
   kitty @ set-colors -a "$HOME/.config/nvim/kitty/themes/papercolor-dark.conf" 
 }
+
+if [[ -z "$THEME" ]]; then
+  dark_theme
+fi
+
+alias set-dark="dark_theme"
+alias set-light="light_theme"
 ```
 
 Then in your terminal:
